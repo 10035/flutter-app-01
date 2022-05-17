@@ -23,7 +23,7 @@ class MyStatelessWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Travel App'),
+        title: const Text('Travel App'), backgroundColor: Color.fromARGB(255, 73, 84, 180),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.add_alert),
@@ -63,10 +63,11 @@ class MyStatelessWidget extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        
+        showUnselectedLabels: true,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
+            backgroundColor: Color.fromARGB(255, 73, 84, 180),
             label: 'Home',
           ),
           BottomNavigationBarItem(
@@ -77,15 +78,15 @@ class MyStatelessWidget extends StatelessWidget {
             icon: Icon(Icons.attach_money),
             label: 'Budgets',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.book),
-          //   label: 'Journal',
-          // ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.person),
-          //   // label: 'Friends', 
-          //   label: 'Friends',
-          // ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Journal',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            // label: 'Friends', 
+            label: 'Friends',
+          ),
         ]),
       // floatingActionButton: const FloatingActionButton(onPressed: null),
     );
