@@ -83,25 +83,10 @@ class MyStatelessWidget extends StatelessWidget {
           ),
         ],
       ),
-      // body: Center(
-      //   child: Container(
-      //     margin: const EdgeInsets.all(10.0),
-      //     // color: Colors.amber[600],
-      //     width: 200.0,
-      //     height: 200.0,
-      //     child: const Image(
-      //       image: NetworkImage(
-      //           'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-      //     ),
-      //   ),
-      //   //   child: Image(
-      //   //   image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-      //   // ),
-      // ),
 
       body: Center(
         child: Card(
-          elevation: 1,
+          elevation: 4,
           shape: RoundedRectangleBorder(
             side: BorderSide(
               color: Theme.of(context).colorScheme.outline,
@@ -146,25 +131,3 @@ class MyStatelessWidget extends StatelessWidget {
     );
   }
 }
-
-// bottomNavigationBar: BottomNavigationBar(
-//   items: const <BottomNavigationBarItem>[
-//     BottomNavigationBarItem(
-//       icon: Icon(Icons.home),
-//       label: 'Home',
-//     ),
-//     BottomNavigationBarItem(
-//       icon: Icon(Icons.business),
-//       label: 'Business',
-//     ),
-//     BottomNavigationBarItem(
-//       icon: Icon(Icons.school),
-//       label: 'School',
-//     ),
-//   ],
-//   currentIndex: _selectedIndex,
-//   selectedItemColor: Colors.amber[800],
-//   onTap: _onItemTapped,
-// ),
-
-// Line 17 what is the argumentnfor:
