@@ -49,7 +49,34 @@ class MyStatelessWidget extends StatelessWidget {
                         style: TextStyle(fontSize: 24),
                       ),
                     ),
+                  bottomNavigationBar: BottomNavigationBar(
+                  showUnselectedLabels: true,
+                  items: const <BottomNavigationBarItem>[
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.home),
+                      backgroundColor: Color.fromARGB(255, 73, 84, 180),
+                      label: 'Home',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.map),
+                      label: 'Trips', 
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.attach_money),
+                      label: 'Budgets',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.book),
+                      label: 'Journal',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.person),
+                      // label: 'Friends', 
+                      label: 'Friends',
+                    ),  
+                  ]),
                   );
+                  
                 },
               ));
             },
