@@ -23,7 +23,8 @@ class MyStatelessWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Travel App'), backgroundColor: Color.fromARGB(255, 73, 84, 180),
+        title: const Text('Travel App'),
+        backgroundColor: Color.fromARGB(255, 73, 84, 180),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.add_alert),
@@ -49,6 +50,32 @@ class MyStatelessWidget extends StatelessWidget {
                         style: TextStyle(fontSize: 24),
                       ),
                     ),
+                    bottomNavigationBar: BottomNavigationBar(
+                        showUnselectedLabels: true,
+                        items: const <BottomNavigationBarItem>[
+                          BottomNavigationBarItem(
+                            icon: Icon(Icons.home),
+                            backgroundColor: Color.fromARGB(255, 73, 84, 180),
+                            label: 'Home',
+                          ),
+                          BottomNavigationBarItem(
+                            icon: Icon(Icons.map),
+                            label: 'Trips',
+                          ),
+                          BottomNavigationBarItem(
+                            icon: Icon(Icons.attach_money),
+                            label: 'Budgets',
+                          ),
+                          BottomNavigationBarItem(
+                            icon: Icon(Icons.book),
+                            label: 'Journal',
+                          ),
+                          BottomNavigationBarItem(
+                            icon: Icon(Icons.person),
+                            // label: 'Friends',
+                            label: 'Friends',
+                          ),
+                        ]),
                   );
                 },
               ));
@@ -56,66 +83,51 @@ class MyStatelessWidget extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(
-        child: Text(
-          'This is the home page',
-          style: TextStyle(fontSize: 24),
+
+      body: Center(
+        child: Card(
+          elevation: 4,
+          shape: RoundedRectangleBorder(
+            side: BorderSide(
+              color: Theme.of(context).colorScheme.outline,
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(12)),
+          ),
+          child: const SizedBox(
+            width: 300,
+            height: 150,
+            // child: Center(child: Text('Outlined Card')),
+          ),
         ),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
-        showUnselectedLabels: true,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            backgroundColor: Color.fromARGB(255, 73, 84, 180),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.map),
-            label: 'Trips', 
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.attach_money),
-            label: 'Budgets',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Journal',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            // label: 'Friends', 
-            label: 'Friends',
-          ),
-        ]),
+          showUnselectedLabels: true,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              backgroundColor: Color.fromARGB(255, 73, 84, 180),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.map),
+              label: 'Trips',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.attach_money),
+              label: 'Budgets',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book),
+              label: 'Journal',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              // label: 'Friends',
+              label: 'Friends',
+            ),
+          ]),
       // floatingActionButton: const FloatingActionButton(onPressed: null),
     );
   }
 }
-
-
-
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: const <BottomNavigationBarItem>[
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.business),
-      //       label: 'Business',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.school),
-      //       label: 'School',
-      //     ),
-      //   ],
-      //   currentIndex: _selectedIndex,
-      //   selectedItemColor: Colors.amber[800],
-      //   onTap: _onItemTapped,
-      // ),
-
-
-
-
-// Line 17 what is the argumentnfor:
