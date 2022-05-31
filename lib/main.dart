@@ -57,10 +57,9 @@ class MyStatelessWidget extends StatelessWidget {
         ],
       ),
       body: const Center(
-        child: Text(
-          'This is the home page',
-          style: TextStyle(fontSize: 24),
-        ),
+        child: Image(
+        image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+      ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
