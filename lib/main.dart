@@ -22,6 +22,7 @@ class MyStatelessWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // *********  APP BAR ************
       appBar: AppBar(
         title: const Text('Travel App'),
         backgroundColor: Color.fromARGB(255, 73, 84, 180),
@@ -50,32 +51,35 @@ class MyStatelessWidget extends StatelessWidget {
                         style: TextStyle(fontSize: 24),
                       ),
                     ),
-                    bottomNavigationBar: BottomNavigationBar(
-                        showUnselectedLabels: true,
-                        items: const <BottomNavigationBarItem>[
-                          BottomNavigationBarItem(
-                            icon: Icon(Icons.home),
-                            backgroundColor: Color.fromARGB(255, 73, 84, 180),
-                            label: 'Home',
-                          ),
-                          BottomNavigationBarItem(
-                            icon: Icon(Icons.map),
-                            label: 'Trips',
-                          ),
-                          BottomNavigationBarItem(
-                            icon: Icon(Icons.attach_money),
-                            label: 'Budgets',
-                          ),
-                          BottomNavigationBarItem(
-                            icon: Icon(Icons.book),
-                            label: 'Journal',
-                          ),
-                          BottomNavigationBarItem(
-                            icon: Icon(Icons.person),
-                            // label: 'Friends',
-                            label: 'Friends',
-                          ),
-                        ]),
+                    // bottomNavigationBar: BottomNavigationBar(
+                    //     showUnselectedLabels: true,
+                    //     items: const <BottomNavigationBarItem>[
+                    //       BottomNavigationBarItem(
+                    //         icon: Icon(Icons.home),
+                    //         backgroundColor: Color.fromARGB(255, 73, 84, 180),
+                    //         label: 'Home',
+                            
+                    //       ),
+                    //       BottomNavigationBarItem(
+                    //         icon: Icon(Icons.map),
+                    //         label: 'Trips',
+                    //         // onPressed: () {}
+
+                    //       ),
+                    //       BottomNavigationBarItem(
+                    //         icon: Icon(Icons.attach_money),
+                    //         label: 'Budgets',
+                    //       ),
+                    //       BottomNavigationBarItem(
+                    //         icon: Icon(Icons.book),
+                    //         label: 'Journal',
+                    //       ),
+                    //       BottomNavigationBarItem(
+                    //         icon: Icon(Icons.person),
+                    //         // label: 'Friends',
+                    //         label: 'Friends',
+                    //       ),
+                    //     ]),
                   );
                 },
               ));
@@ -83,6 +87,8 @@ class MyStatelessWidget extends StatelessWidget {
           ),
         ],
       ),
+
+// *********  BODY ************
 
       body: Center(
         child: Card(
@@ -101,6 +107,8 @@ class MyStatelessWidget extends StatelessWidget {
         ),
       ),
 
+
+// *********  BOTTOM NAVBAR ************
       bottomNavigationBar: BottomNavigationBar(
           showUnselectedLabels: true,
           items: const <BottomNavigationBarItem>[
@@ -108,6 +116,8 @@ class MyStatelessWidget extends StatelessWidget {
               icon: Icon(Icons.home),
               backgroundColor: Color.fromARGB(255, 73, 84, 180),
               label: 'Home',
+              // currentIndex: _selectedIndex,
+              // onTap: _onItemTapped,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.map),
@@ -131,3 +141,9 @@ class MyStatelessWidget extends StatelessWidget {
     );
   }
 }
+          
+          // void _onItemTapped(int index) {
+          //   setState(() {
+          //     _selectedIndex = index;
+          //   });
+          // }
