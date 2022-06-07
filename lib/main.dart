@@ -28,8 +28,9 @@ class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
   final screens = [
     Center(child: Text('Home', style: TextStyle(fontSize: 40))),
-    Center(child: Text('Feed', style: TextStyle(fontSize: 40))),
-    Center(child: Text('Chat', style: TextStyle(fontSize: 40))),
+    Center(child: Text('Trips', style: TextStyle(fontSize: 40))),
+    Center(child: Text('Budgets', style: TextStyle(fontSize: 40))),
+    Center(child: Text('Journal', style: TextStyle(fontSize: 40))),
     Center(child: Text('Profile', style: TextStyle(fontSize: 40))),
   ];
  
@@ -56,13 +57,18 @@ class _MainPageState extends State<MainPage> {
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Feed',
+            icon: Icon(Icons.map),
+            label: 'Trips',
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Chat',
+            icon: Icon(Icons.attach_money_rounded),
+            label: 'Budgets',
+            backgroundColor: Colors.blue,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Journal',
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
