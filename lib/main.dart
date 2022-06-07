@@ -27,6 +27,11 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
   final screens = [
+    // HomePage(),
+    // TripsPage(),
+    // BudgetsPage(),
+    // JournalPage(),
+
     Center(child: Text('Home', style: TextStyle(fontSize: 40))),
     Center(child: Text('Trips', style: TextStyle(fontSize: 40))),
     Center(child: Text('Budgets', style: TextStyle(fontSize: 40))),
@@ -37,7 +42,8 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Bottom Navigation Bar'),centerTitle: true,
+      appBar: AppBar(title: Text('Travel App'),centerTitle: true,
+      backgroundColor: Color.fromARGB(255, 69, 93, 226),
       ),
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
