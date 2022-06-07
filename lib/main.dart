@@ -26,18 +26,27 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
+  final screens = [
+    Center(child: Text('Home', style: TextStyle(fontSize: 40))),
+    Center(child: Text('Feed', style: TextStyle(fontSize: 40))),
+    Center(child: Text('Chat', style: TextStyle(fontSize: 40))),
+    Center(child: Text('Profile', style: TextStyle(fontSize: 40))),
+  ];
  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Bottom Navigation Bar'),centerTitle: true,
       ),
-      body: Center(child: Text('Home', style: TextStyle(fontSize: 40))),
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color.fromARGB(255, 69, 93, 226),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white70,
+        // iconSize: 20,
+        // selectedFontSize: 12,
+        // showUnselectedLabels: true,
         currentIndex: currentIndex,
         onTap: (index) => setState(() => currentIndex = index),
         items: [
