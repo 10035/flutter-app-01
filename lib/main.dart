@@ -53,7 +53,26 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: Color.fromARGB(255, 69, 93, 226),
       ),
 
-      body: screens[currentIndex],
+      // body: screens[currentIndex],
+
+      body: Container(
+        height: 140,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            buildCard(),
+            SizedBox(width: 12),
+            buildCard(),
+            SizedBox(width: 12),
+            buildCard(),
+            SizedBox(width: 12),
+            buildCard(),
+            SizedBox(width: 12),
+          ],
+      )
+      
+
+      ),
   
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -97,28 +116,69 @@ class _MainPageState extends State<MainPage> {
   }
 }
 
-class BannerWidgetArea extends StatelessWidget {
-  const BannerWidgetArea({ Key? key }) : super(key: key);
+Widget buildCard() => Container(
+      width: 200,
+      height: 100,
+      color: Colors.purple,
+      child: Column(
+        children: [
+          Image.network(
+            "https://unsplash.com/photos/LSscVPEyQpI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
+            ),
+        ],
+      ),
+);
 
-  @override
-  Widget build(BuildContext context) {
+
+// class HorizontalList extends StatelessWidget {
+//   const HorizontalList({ Key? key }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       color: Colors.pink,
+//     );
+//   }
+// }
+
+// class BannerWidgetArea extends StatelessWidget {
+//   const BannerWidgetArea({ Key? key }) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
 
     // var screenHeight = MediaQuery.of(context).size.height;
-    var screenWidth = MediaQuery.of(context).size.width;
+    // var screenWidth = MediaQuery.of(context).size.width;
 
-    PageController controller = PageController(initialPage: 1);
+    // PageController controller = PageController(initialPage: 1);
 
-    return Container(
-      width: screenWidth,
-      height: screenWidth*9/16,
-      child: PageView(
-        controller: ,
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[],
-      ),
-    );
-  }
-}
+    // final banners = List<int>.filled(5, 0, growable: true); NEW SYNTAX
+
+// List<Widget> banners = new List<Widget>();
+    
+    // for(int x = 0; x < bannerItems.length; x++){
+    //   var bannerView = Container(
+    //     child: Stack(
+    //       fit: StackFit.expand,
+    //       children: <Widget>[
+    //         Image.asset(bannerImage[x],fit: BoxFit.cover)
+    //       ],
+    //     ),
+    //   );
+      // banners.add(bannerView);
+    // }
+
+//     return Container(
+//       width: screenWidth,
+//       height: screenWidth*9/16,
+//       child: PageView(
+//         controller: controller,
+//         scrollDirection: Axis.horizontal,
+//         // children: banners,
+//       ),
+//     );
+//   }
+// }
       // // *********  APP BAR ************
       // appBar: AppBar(
       //   title: const Text('Travel App'),
