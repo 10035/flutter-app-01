@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
 }
 
 var bannerItems = ["Barcelona", "Melbourne", "Zürich", "Buenos Aires", "Cartagena"];
-var bannerImage = [];
+var bannerImage = [
+      "images/barcelona.jpg",
+];
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -41,15 +43,18 @@ class _MainPageState extends State<MainPage> {
     Center(child: Text('Journal', style: TextStyle(fontSize: 40))),
     Center(child: Text('Profile', style: TextStyle(fontSize: 40))),
   ];
+
  
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(title: Text('Travel App'),centerTitle: true,
       backgroundColor: Color.fromARGB(255, 69, 93, 226),
       ),
 
       body: screens[currentIndex],
+  
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color.fromARGB(255, 69, 93, 226),
@@ -87,6 +92,29 @@ class _MainPageState extends State<MainPage> {
             backgroundColor: Colors.blue,
           ),
         ],
+      ),
+    );
+  }
+}
+
+class BannerWidgetArea extends StatelessWidget {
+  const BannerWidgetArea({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    // var screenHeight = MediaQuery.of(context).size.height;
+    var screenWidth = MediaQuery.of(context).size.width;
+
+    PageController controller = PageController(initialPage: 1);
+
+    return Container(
+      width: screenWidth,
+      height: screenWidth*9/16,
+      child: PageView(
+        controller: ,
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[],
       ),
     );
   }
