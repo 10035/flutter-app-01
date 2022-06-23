@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
+var bannerItems = ["Barcelona", "Melbourne", "Zürich", "Buenos Aires", "Cartagena"];
+var bannerImage = [];
+
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
   @override
@@ -45,6 +48,7 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(title: Text('Travel App'),centerTitle: true,
       backgroundColor: Color.fromARGB(255, 69, 93, 226),
       ),
+
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
